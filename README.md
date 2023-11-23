@@ -1,4 +1,4 @@
-# AzFunctionWarmup
+# Caffoa.NET.GeoJson
 Extension library for CAFFOA.NET to support parsing/serializing GeoJson formats into/from NetTopologySuite objects
 
 * Implements ToPoint, ToMultiPoint etc. in the Caffoa namespace.
