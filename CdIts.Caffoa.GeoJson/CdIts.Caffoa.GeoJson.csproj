@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Caffoa</RootNamespace>
+        <LangVersion>10</LangVersion>
+        <IsPackable>true</IsPackable>
+        <TargetFrameworks>net7.0;net6.0;netcoreapp3.1</TargetFrameworks>
+        <RepositoryUrl>https://github.com/claasd/caffoa.net.geojson.git</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Authors>claasd</Authors>
+        <Description>Extension library for CAFFOA.NET to support parsing/serializing GeoJson formats into/from NetTopologySuite objects
+        </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CdIts.Caffoa.Json.Net" Version="3.1.1" />
+      <PackageReference Include="NetTopologySuite" Version="2.5.0" />
+      <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="4.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="../openapi/*.*" Pack="true" PackagePath="contentFiles/openapi">
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+    </ItemGroup>
+</Project>
