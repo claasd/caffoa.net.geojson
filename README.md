@@ -3,8 +3,8 @@ Extension library for CAFFOA.NET to support parsing/serializing GeoJson formats 
 
 * Implements ToPoint, ToMultiPoint etc. in the Caffoa namespace.
 * Provides an implementation of ICaffoaResultHandler that can directly handle outgoing NetTopologySuite objects.
-* Provides an implementation of ICaffoaJsonParser that can directly hande incoming NetTopologySuite objects.
-* startup extension `AddCaffoaGeoJsonHandling` to register the above.
+* Provides an implementation of ICaffoaJsonParser that can directly handle incoming NetTopologySuite objects.
+* startup extension `AddCaffoaGeoJsonHandling` to register both of the above.
 
 ## License
 MIT License

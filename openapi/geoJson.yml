@@ -3,7 +3,7 @@ info:
   title: Base Types for well defined GEOJson API elements
   version: "1.0.0"
   description: |
-    These types are inteded to use them in allOf definitions for your own, well defined types.
+    These types are intended to use them in allOf definitions for your own, well defined types.
     Example:
       ```yaml
       SpecificFeatureCollection:
