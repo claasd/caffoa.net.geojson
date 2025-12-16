@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CdIts.Caffoa.Json.Net" Version="5.0.0-rc.1" />
+      <PackageReference Include="CdIts.Caffoa.Json.Net" Version="5.0.0" />
       <PackageReference Include="NetTopologySuite" Version="2.6.0" />
       <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="4.0.0" />
     </ItemGroup>
