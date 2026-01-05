@@ -22,6 +22,22 @@ public static class CaffoaGeoJsonExtensions
 
     public static MultiPolygon ToMultiPolygon(this MultiPolygon poly, bool deepClone = true) =>
         deepClone ? new MultiPolygon(poly.Geometries.Select(g => g as Polygon).ToArray()) : poly;
+    
+    public static Geometry ToGeometry(this Geometry geometry, bool deepClone = true) =>
+        deepClone ? geometry switch
+            {
+                Point p => p.ToPoint(),
+                MultiPoint mp => mp.ToMultiPoint(),
+                LineString ls => ls.ToLineString(),
+                MultiLineString mls => mls.ToMultiLineString(),
+                Polygon poly => poly.ToPolygon(),
+                MultiPolygon mpoly => mpoly.ToMultiPolygon(),
+                GeometryCollection gc => new GeometryCollection(gc.Geometries.Select(g => g.ToGeometry()).ToArray()),
+                _ => throw new NotSupportedException(
+                    $"Geometry type {geometry.GetType().Name} is not supported for cloning.")
+            }
+            : geometry;
+
 
     public static bool IsNullOrXyOnly(this Coordinate? c) => c is null || (double.IsNaN(c.Z) && double.IsNaN(c.M)); 
     
